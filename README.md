@@ -1,6 +1,4 @@
-markdown
 
-Copiar
 # Proyecto Angular 16 - Gestión de Personas
 
 Este proyecto es una aplicación de gestión de personas construida con Angular 16. Sigue las instrucciones a continuación para clonar y configurar el proyecto.
@@ -14,8 +12,8 @@ Este proyecto es una aplicación de gestión de personas construida con Angular 
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
+   git clone (https://github.com/Kevinrente/kjrt_persona_angular.git)
+   cd kjrt_persona_angular
 Instala las dependencias del proyecto:
 
 bash

@@ -1,0 +1,95 @@
+ <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">cedula</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of personas">
+            <th scope="row">{{item.kjrt_nombre}}</th>
+            <td>{{item.kjrt_apellido}}</td>
+            <td>{{item.kjrt_Cedula}}</td>
+            <td>{{item.kjrt_Edad}}</td>
+            <td>{{item.kjrt_correo}}</td>
+            <td>{{item.kjrt_Telefono}}</td>
+            <td>{{item.kjrt_Direccion}}</td>
+            <td>
+                <button  class="btn btn-outline-info" (click)="editPersona(item)">Editar</button>
+                <button  class="btn btn-outline-danger" (click)="deletePersona(item.kjrt_id)">Eliminar</button>
+
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+ </div>
+ <hr>
+ 
+ <div class="container">
+    <h1 class="text-center"> {{ isEditing ? 'Editar' : 'Agregar' }} Persona</h1>
+    <form (ngSubmit)="savePersona()" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Ingresar Nombre</label>
+          <input [(ngModel)]="persona.kjrt_nombre" name="kjrt_nombre" type="text" class="form-control" id="validationCustom01" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Ingresar Apellido</label>
+          <input [(ngModel)]="persona.kjrt_apellido" name="kjrt_apellido"  type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Ingresar Direccion</label>
+            <input [(ngModel)]="persona.kjrt_Direccion" name="kjrt_Direccion" type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Ingresar Edad</label>
+            <input [(ngModel)]="persona.kjrt_Edad" name="kjrt_Edad"  type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Ingresar Cedula</label>
+            <input [(ngModel)]="persona.kjrt_Cedula" name="kjrt_Cedula"  type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Ingresar Telefono</label>
+            <input [(ngModel)]="persona.kjrt_Telefono" name="kjrt_Telefono"  type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Ingresar Correo</label>
+            <input [(ngModel)]="persona.kjrt_correo" name="kjrt_correo"  type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+      
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">{{ isEditing ? 'Actualizar' : 'Agregar' }}</button>
+        </div>
+      </form>
+ </div>
+
+

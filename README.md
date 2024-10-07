@@ -1,27 +1,63 @@
-# KjtrPersona
+markdown
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Copiar
+# Proyecto Angular 16 - Gestión de Personas
 
-## Development server
+Este proyecto es una aplicación de gestión de personas construida con Angular 16. Sigue las instrucciones a continuación para clonar y configurar el proyecto.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerrequisitos
 
-## Code scaffolding
+- [Node.js y npm](https://nodejs.org/) (Node Package Manager)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio
+Instala las dependencias del proyecto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+bash
 
-## Running unit tests
+Copiar
+npm install
+Configura la URL de la API en el servicio:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Abre el archivo persona.service.ts que se encuentra en la carpeta src/app.
 
-## Running end-to-end tests
+Cambia la URL de la API en la variable urlApi si es necesario:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+typescript
 
-## Further help
+Copiar
+private urlApi = 'http://localhost:5025/api/Personas';
+Ejecución
+Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+bash
+
+Copiar
+ng serve
+La aplicación estará disponible en http://localhost:4200.
+
+Uso
+Funcionalidades Principales
+Ver Personas: Ver una lista de todas las personas registradas.
+
+Agregar Persona: Agregar una nueva persona a través del formulario.
+
+Editar Persona: Editar los datos de una persona existente.
+
+Eliminar Persona: Eliminar una persona de la lista.
+
+Endpoints de la API
+GET /api/Personas: Obtiene todas las personas.
+
+GET /api/Personas/{id}: Obtiene una persona por ID.
+
+POST /api/Personas: Crea una nueva persona.
+
+PUT /api/Personas/{id}: Actualiza una persona por ID.
+
+DELETE /api/Personas/{id}: Elimina una persona por ID.

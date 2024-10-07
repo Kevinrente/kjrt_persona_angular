@@ -1,0 +1,12 @@
+.flex-persona{
+    background-color: brown ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flex-add{
+    margin-top: 300px;
+    background-color: chocolate;
+}
+

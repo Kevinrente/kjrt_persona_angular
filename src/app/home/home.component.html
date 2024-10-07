@@ -35,7 +35,7 @@
  
  <div class="container">
     <h1 class="text-center"> {{ isEditing ? 'Editar' : 'Agregar' }} Persona</h1>
-    <form (ngSubmit)="savePersona()" class="row g-3 needs-validation" novalidate>
+    <form  (ngSubmit)="savePersona()" class="row g-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Ingresar Nombre</label>
           <input [(ngModel)]="persona.kjrt_nombre" name="kjrt_nombre" type="text" class="form-control" id="validationCustom01" value="Mark" required>
